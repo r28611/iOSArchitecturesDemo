@@ -45,8 +45,26 @@ final class WhatsNewViewController: UIViewController {
     
     private func fillData() {
         self.whatsNewView.versionNumberLabel.text = app.version
-        self.whatsNewView.timeLabel.text = app.currentVersionReleaseDate?.toDate()?.toString()
+        self.whatsNewView.timeLabel.text = howLongAgoString(interval: Date() - app.currentVersionReleaseDate?.toDate())
         self.whatsNewView.descriptionLabel.text = app.releaseNotes
-//        self.whatsNewView.ratingLabel.text = app.averageRating.flatMap { "\($0)" }
+    }
+    
+    // не знаю как красиво сделать :/
+    func howLongAgoString(interval:(year: Int?, month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?)) -> String {
+        if let year = interval.year,
+           year > 0 { return "\(year)y ago" }
+        if let month = interval.month,
+            month > 0 { return "\(month)mo ago" }
+        if let day = interval.day,
+            day > 0 { return "\(day)d ago" }
+        if let hour = interval.hour,
+           hour > 0 { return "\(hour)h ago" }
+        if let minute = interval.minute,
+           minute > 0 { return "\(minute)m ago" }
+        if let second = interval.second,
+           second > 0 { return "\(second)s ago" }
+        else {
+            return ""
+        }
     }
 }
