@@ -44,10 +44,9 @@ final class WhatsNewViewController: UIViewController {
     // MARK: - Private
     
     private func fillData() {
-        self.whatsNewView.versionNumberLabel.text = "5.6.4"
-        self.whatsNewView.timeLabel.text = "6d ago"
-        self.whatsNewView.descriptionLabel.text = "Apple Amsterdam. Open tot 20:00 uur. We zijn open. Je bent welkom. Je kunt shoppen door langs te komen, een afspraak te maken voor een persoonlijke sessie"
+        self.whatsNewView.versionNumberLabel.text = app.version
+        self.whatsNewView.timeLabel.text = app.currentVersionReleaseDate?.toDate()?.toString()
+        self.whatsNewView.descriptionLabel.text = app.releaseNotes
 //        self.whatsNewView.ratingLabel.text = app.averageRating.flatMap { "\($0)" }
     }
-    
 }
