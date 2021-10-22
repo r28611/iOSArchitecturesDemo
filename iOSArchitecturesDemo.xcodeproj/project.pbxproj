@@ -15,6 +15,8 @@
 		ABD4536F2720C42100D2AA33 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4536E2720C42100D2AA33 /* SearchViewController.swift */; };
 		ABD453712720C44700D2AA33 /* SearchViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD453702720C44700D2AA33 /* SearchViewInterface.swift */; };
 		ABD453742720C53900D2AA33 /* AppCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD453732720C53900D2AA33 /* AppCellModel.swift */; };
+		ABD453782723555A00D2AA33 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD453772723555A00D2AA33 /* WhatsNewView.swift */; };
+		ABD4537B27235A8400D2AA33 /* WhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD4537A27235A8400D2AA33 /* WhatsNewViewController.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
 		E0E1D29D2034A3350011E01A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D29B2034A3350011E01A /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 		ABD4536E2720C42100D2AA33 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ABD453702720C44700D2AA33 /* SearchViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewInterface.swift; sourceTree = "<group>"; };
 		ABD453732720C53900D2AA33 /* AppCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCellModel.swift; sourceTree = "<group>"; };
+		ABD453772723555A00D2AA33 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
+		ABD4537A27235A8400D2AA33 /* WhatsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewViewController.swift; sourceTree = "<group>"; };
 		E0E1D28F2034A3350011E01A /* iOSArchitecturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArchitecturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E1D2922034A3350011E01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E1D2992034A3350011E01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +107,31 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		ABD453752723372800D2AA33 /* WhatsNew */ = {
+			isa = PBXGroup;
+			children = (
+				ABD4537927235A6D00D2AA33 /* Controller */,
+				ABD453762723374900D2AA33 /* View */,
+			);
+			path = WhatsNew;
+			sourceTree = "<group>";
+		};
+		ABD453762723374900D2AA33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABD453772723555A00D2AA33 /* WhatsNewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABD4537927235A6D00D2AA33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ABD4537A27235A8400D2AA33 /* WhatsNewViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DB95456C2F2DCD400ABCE8E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +172,7 @@
 		E0E1D2A52034A3560011E01A /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				ABD453752723372800D2AA33 /* WhatsNew */,
 				E0E1D2A62034A36C0011E01A /* Search */,
 				E0E1D2A72034A3780011E01A /* AppDetail */,
 			);
@@ -425,7 +455,9 @@
 				ABD4536A2720BCB800D2AA33 /* SearchPresenter.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
+				ABD4537B27235A8400D2AA33 /* WhatsNewViewController.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
+				ABD453782723555A00D2AA33 /* WhatsNewView.swift in Sources */,
 				ABD453682720966A00D2AA33 /* AppDetailHeaderViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				ABD453662720960E00D2AA33 /* AppDetailHeaderView.swift in Sources */,
