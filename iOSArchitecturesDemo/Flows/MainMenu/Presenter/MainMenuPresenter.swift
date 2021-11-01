@@ -19,7 +19,7 @@ final class MainMenuPresenter: MenuOutput {
     }
     
     func viewDidSelectSong() {
-        let vc = SearchModuleBuilder.build()
+        let vc = SongSearchModuleBuilder.build()
         vc.navigationItem.title = "Search via iTunes"
         self.viewInput?.navigationController?.pushViewController(vc, animated: true)
     }
