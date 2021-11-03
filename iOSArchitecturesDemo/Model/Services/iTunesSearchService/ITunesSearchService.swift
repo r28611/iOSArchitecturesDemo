@@ -8,7 +8,7 @@
 
 import Alamofire
 
-final class ITunesSearchService {
+final class SearchServiceInterface {
     
     public typealias CompletionApps = (Result<[ITunesApp]>) -> Void
     public typealias CompletionSongs = (Result<[ITunesSong]>) -> Void

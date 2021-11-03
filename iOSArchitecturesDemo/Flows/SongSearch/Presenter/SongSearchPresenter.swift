@@ -12,7 +12,7 @@ final class SongSearchPresenter {
     
     weak var viewInput: (UIViewController & SongSearchViewInput)?
     
-    private let searchService = ITunesSearchService()
+    private let searchService = SearchServiceInterface()
     
     private func requestSongs(with query: String) {
         self.searchService.getSongs(forQuery: query) { [weak self] result in
