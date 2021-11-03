@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0454C65518ABA536E710AFFD /* Pods_iOSArchitecturesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEA6AF9F424A0D5873D2723 /* Pods_iOSArchitecturesDemo.framework */; };
+		ABAA1BE7273339B0006BFEDB /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1BE6273339B0006BFEDB /* SearchRouter.swift */; };
+		ABAA1BEA27333A66006BFEDB /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1BE927333A66006BFEDB /* SearchInteractor.swift */; };
 		ABC961C72729E2E3009264CC /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC961C62729E2E3009264CC /* MainMenuView.swift */; };
 		ABC961CA2729E437009264CC /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC961C92729E437009264CC /* MainMenuViewController.swift */; };
 		ABC961CD2729E601009264CC /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC961CC2729E601009264CC /* MainMenuPresenter.swift */; };
@@ -53,6 +55,8 @@
 		8BE349225151AE13B1EDE333 /* Pods-iOSArchitecturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEA6AF9F424A0D5873D2723 /* Pods_iOSArchitecturesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArchitecturesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ABAA1BE6273339B0006BFEDB /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		ABAA1BE927333A66006BFEDB /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		ABC961C62729E2E3009264CC /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		ABC961C92729E437009264CC /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		ABC961CC2729E601009264CC /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
@@ -115,6 +119,22 @@
 				A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABAA1BE5273339A3006BFEDB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA1BE6273339B0006BFEDB /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		ABAA1BE827333A47006BFEDB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA1BE927333A66006BFEDB /* SearchInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		ABC961C52729D8DF009264CC /* MainMenu */ = {
@@ -283,6 +303,8 @@
 		E0E1D2A62034A36C0011E01A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA1BE827333A47006BFEDB /* Interactor */,
+				ABAA1BE5273339A3006BFEDB /* Router */,
 				ABD453722720C47A00D2AA33 /* Builder */,
 				ABD4536B2720BE4500D2AA33 /* Presenter */,
 				F8A97B3622498F0C00FB2C0E /* View */,
@@ -554,6 +576,7 @@
 				ABD4537D27236EBA00D2AA33 /* + String.swift in Sources */,
 				ABC961DF27309B86009264CC /* SongSearchViewInterface.swift in Sources */,
 				ABC961D827300F16009264CC /* SongCell.swift in Sources */,
+				ABAA1BEA27333A66006BFEDB /* SearchInteractor.swift in Sources */,
 				ABD4536D2720C2BE00D2AA33 /* SearchModuleBuilder.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
@@ -587,6 +610,7 @@
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
+				ABAA1BE7273339B0006BFEDB /* SearchRouter.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
