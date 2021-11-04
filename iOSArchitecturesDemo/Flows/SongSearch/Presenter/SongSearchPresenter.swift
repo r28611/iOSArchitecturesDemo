@@ -32,6 +32,11 @@ final class SongSearchPresenter {
                 }
         }
     }
+    
+    private func openPlayer(with song: ITunesSong) {
+        let songPlayerViewController = SongPlayerViewController(song: song)
+        self.viewInput?.navigationController?.pushViewController(songPlayerViewController, animated: true)
+    }
 }
 
 // MARK: - SearchViewOutput
@@ -40,6 +45,10 @@ extension SongSearchPresenter: SongSearchViewOutput {
     func viewDidSearch(with query: String) {
         self.viewInput?.throbber(show: true)
         self.requestSongs(with: query)
+    }
+    
+    func viewDidSelectApp(_ song: ITunesSong) {
+        self.openPlayer(with: song)
     }
 }
 

@@ -24,4 +24,6 @@ protocol SongSearchViewInput: class {
 protocol SongSearchViewOutput: class {
     
     func viewDidSearch(with query: String)
+    
+    func viewDidSelectApp(_ app: ITunesSong)
 }
