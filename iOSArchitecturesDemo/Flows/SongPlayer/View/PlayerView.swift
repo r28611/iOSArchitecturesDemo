@@ -37,6 +37,14 @@ final class PlayerView: UIView {
         return label
     }()
     
+    private(set) lazy var collectionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .lightGray
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        return label
+    }()
+    
     private(set) lazy var playButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -46,12 +54,10 @@ final class PlayerView: UIView {
         return button
     }()
     
-    private(set) lazy var collectionLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .lightGray
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
-        return label
+    private(set) lazy var playProgress: UIProgressView = {
+        let view = UIProgressView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: - Init
@@ -75,6 +81,7 @@ final class PlayerView: UIView {
         self.addSubview(self.artictNameLabel)
         self.addSubview(self.collectionLabel)
         self.addSubview(self.playButton)
+        self.addSubview(self.playProgress)
         
         NSLayoutConstraint.activate([
             self.imageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 12.0),
@@ -99,6 +106,10 @@ final class PlayerView: UIView {
             self.playButton.widthAnchor.constraint(equalToConstant: 80.0),
             self.playButton.heightAnchor.constraint(equalToConstant: 32.0),
             
+            self.playProgress.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            self.playProgress.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.playProgress.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -32),
+            self.playProgress.heightAnchor.constraint(equalToConstant: 10.0)
             ])
     }
 }
