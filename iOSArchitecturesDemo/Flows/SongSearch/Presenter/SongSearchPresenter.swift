@@ -47,7 +47,7 @@ extension SongSearchPresenter: SongSearchViewOutput {
         self.requestSongs(with: query)
     }
     
-    func viewDidSelectApp(_ song: ITunesSong) {
+    func viewDidSelectSong(_ song: ITunesSong) {
         self.openPlayer(with: song)
     }
 }
