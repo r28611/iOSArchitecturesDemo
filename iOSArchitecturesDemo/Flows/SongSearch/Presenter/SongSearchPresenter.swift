@@ -34,7 +34,7 @@ final class SongSearchPresenter {
     }
     
     private func openPlayer(with song: ITunesSong) {
-        let songPlayerViewController = SongPlayerViewController(song: song)
+        let songPlayerViewController = SongPlayerModuleBuilder.build(song: song)
         self.viewInput?.navigationController?.pushViewController(songPlayerViewController, animated: true)
     }
 }
