@@ -12,10 +12,16 @@ final class SongSearchPresenter {
     
     weak var viewInput: (UIViewController & SongSearchViewInput)?
     
-    private let searchService = ITunesSearchService()
+    let interactor: SongSearchInteractorInput
+    let router: SongSearchRouterInput
+
+    init(interactor: SongSearchInteractorInput, router: SongSearchRouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
     
     private func requestSongs(with query: String) {
-        self.searchService.getSongs(forQuery: query) { [weak self] result in
+        self.interactor.requestSong(with: query) { [weak self] result in
             guard let self = self else { return }
             self.viewInput?.throbber(show: false)
             result
@@ -40,6 +46,10 @@ extension SongSearchPresenter: SongSearchViewOutput {
     func viewDidSearch(with query: String) {
         self.viewInput?.throbber(show: true)
         self.requestSongs(with: query)
+    }
+    
+    func viewDidSelectApp(_ song: ITunesSong) {
+        self.router.openPlayer(for: song)
     }
 }
 

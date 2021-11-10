@@ -11,9 +11,14 @@ import UIKit
 final class SongSearchModuleBuilder {
     
     static func build() -> (UIViewController & SongSearchViewInput) {
-        let presenter = SongSearchPresenter()
+        let router = SongSearchRouter()
+        let interactor = SongSearchInteractor()
+        let presenter = SongSearchPresenter(interactor: interactor, router: router)
         let viewController = SongSearchViewController(presenter: presenter)
+        
         presenter.viewInput = viewController
+        router.viewController = viewController
+        
         return viewController
     }
 }
